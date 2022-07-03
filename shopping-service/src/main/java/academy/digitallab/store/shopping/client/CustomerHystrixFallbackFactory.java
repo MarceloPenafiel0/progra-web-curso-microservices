@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomerHystrixFallbackFactory  implements CustomerClient{
+    //Aqui se implementa el fallback -> Plan B si el servicio falla
+    //Devuelvo un customer vacio
     @Override
     public ResponseEntity<Customer> getCustomer(long id) {
         Customer customer = Customer.builder()

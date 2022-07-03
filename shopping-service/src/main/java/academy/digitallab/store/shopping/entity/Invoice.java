@@ -43,7 +43,7 @@ public class Invoice {
 
     private String state;
 
-    @Transient
+    @Transient//Cuando es transient no se guarda en la base de datos
     private Customer customer;
 
     public Invoice(){

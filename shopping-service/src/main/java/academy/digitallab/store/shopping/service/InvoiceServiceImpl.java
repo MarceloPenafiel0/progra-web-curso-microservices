@@ -10,6 +10,7 @@ import academy.digitallab.store.shopping.repository.InvoiceRepository;
 import academy.digitallab.store.shopping.entity.Invoice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 
@@ -25,6 +26,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Autowired
     InvoiceItemsRepository invoiceItemsRepository;
+
     @Autowired
     CustomerClient customerClient;
 

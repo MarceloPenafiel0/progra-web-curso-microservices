@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "product-service")
+@FeignClient(name = "product-service")//Con esto le indicamos que vamos a consumir el product-service
 @RequestMapping(value = "/products")
 public interface ProductClient {
 

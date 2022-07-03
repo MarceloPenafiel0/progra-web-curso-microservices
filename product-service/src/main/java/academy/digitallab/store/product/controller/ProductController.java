@@ -83,7 +83,8 @@ public class ProductController {
         }
         return ResponseEntity.ok(productDelete);
     }
-    @PutMapping (value = "/{id}/stock")
+
+    @GetMapping(value = "/{id}/stock")
     public ResponseEntity<Product> updateStockProduct(@PathVariable  Long id ,@RequestParam(name = "quantity", required = true) Double quantity){
         Product product = productService.updateStock(id, quantity);
         if (product == null){
@@ -91,6 +92,7 @@ public class ProductController {
         }
         return ResponseEntity.ok(product);
     }
+
     private String formatMessage( BindingResult result){
         List<Map<String,String>> errors = result.getFieldErrors().stream()
                 .map(err ->{
