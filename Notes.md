@@ -102,7 +102,7 @@ En el navegador: http://localhost:8093/hystrix
     En postman: GET localhost:8093/invoices/1 
 	Se quita el servicio de customer
 	Verificar que salga como none el customer en el invoice 
-También se puede hacer pruebas de estrés, en la consola aplicar: `wrk -t4 -c5 -d5s localhost:8093/invoices/1`
+También se puede hacer pruebas de estrés, en la consola aplicar: `wrk -t4 -c5 -d5s http://localhost:8093/invoices/1`
 
 Se está enviando en -t4(4 hilos) -c5(5 conexiones abiertas) -d5s(durante 5 seg)
 
